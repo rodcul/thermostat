@@ -57,4 +57,23 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(20);
   });
 
+  it("display color is green if 18 or under", function(){
+    var thermostat = new Thermostat;
+    thermostat.temperature = 16;
+    expect(thermostat.color()).toEqual("green");
+  });
+
+  it("display color is yellow if 25 or under", function(){
+    var thermostat = new Thermostat;
+    thermostat.temperature = 23;
+    expect(thermostat.color()).toEqual("yellow");
+  });
+
+  it("display color red if over 25", function(){
+    var thermostat = new Thermostat;
+    thermostat.powerSavingMode = false;
+    thermostat.temperature = 30;
+    expect(thermostat.color()).toEqual("red");
+  });
+
 });
