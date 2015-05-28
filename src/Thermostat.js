@@ -4,9 +4,14 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increase = function() {
-  if (this.temperature == 32) {
-    throw "Maxiumum temperature is 32 degrees";
+  if (this.temperature == 32 && this.powerSavingMode == false) {
+    throw "Maxiumum temperature is 32 degrees with power saving mode off";
   }
+
+  else if (this.temperature == 25 && this.powerSavingMode == true) {
+    throw "Maxiumum temperature is 25 degrees with power saving mode on";
+  }
+
   this.temperature += 1;
 };
 

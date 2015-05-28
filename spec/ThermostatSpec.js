@@ -16,15 +16,6 @@ describe("Thermostat", function() {
 		expect(thermostat.temperature).toEqual(19);
 	});
 
-	it("maximum temperature is 32 degrees", function() {
-		var thermostat = new Thermostat;
-		thermostat.temperature = 31;
-		thermostat.increase();
-		expect(function() {
-			thermostat.increase()
-		}).toThrow();
-	});
-
 	it("minimum temperature is 10 degrees", function() {
 		var thermostat = new Thermostat;
 		thermostat.temperature = 11;
@@ -37,6 +28,26 @@ describe("Thermostat", function() {
   it("power saving mode on by default", function(){
     var thermostat = new Thermostat;
     expect(thermostat.powerSavingMode).toEqual(true);
+  });
+
+
+	it("maximum temperature is 25 with power saving mode on", function() {
+		var thermostat = new Thermostat;
+		thermostat.temperature = 24;
+		thermostat.increase();
+		expect(function() {
+			thermostat.increase()
+		}).toThrow();
+	});
+
+  it("max temp is 32 with power saving mode off", function(){
+    var thermostat = new Thermostat;
+    thermostat.powerSavingMode = false;
+    thermostat.temperature = 31;
+    thermostat.increase();
+    expect(function() {
+			thermostat.increase()
+		}).toThrow();
   });
 
 });
