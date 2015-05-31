@@ -1,4 +1,4 @@
-describe('Thermostat',function(){
+describe('Thermostat Web',function(){
 
   beforeEach(function(){
     jasmine.getFixtures().fixturesPath = '.';
@@ -8,6 +8,10 @@ describe('Thermostat',function(){
 
   it('displays default temperature', function(){
     expect('#temperature').toContainText('20');
+  });
+
+  it('increases temperature with up button',function(){
+
   });
 
 });
