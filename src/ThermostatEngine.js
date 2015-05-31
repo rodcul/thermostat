@@ -36,3 +36,7 @@ Thermostat.prototype.color = function () {
   }
 
 };
+
+Thermostat.prototype.togglePowerSavingMode = function() {
+  this.powerSavingMode = !this.powerSavingMode
+};

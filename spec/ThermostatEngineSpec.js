@@ -76,4 +76,13 @@ describe("Thermostat Engine", function() {
     expect(thermostat.color()).toEqual("red");
   });
 
+	it("toggle power saving mode", function(){
+		var thermostat = new Thermostat;
+		expect(thermostat.powerSavingMode).toEqual(true);
+		thermostat.togglePowerSavingMode();
+		expect(thermostat.powerSavingMode).toEqual(false);
+		thermostat.togglePowerSavingMode();
+		expect(thermostat.powerSavingMode).toEqual(true);
+	});
+
 });
