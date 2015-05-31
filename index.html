@@ -1,15 +1,32 @@
 <html>
+
 <head>
-  <script src='lib/jquery.min.js'></script>
-  <script src='src/ThermostatEngine.js'></script>
-  <script src='src/ThermostatWeb.js'></script>
+	<script src='lib/jquery.min.js'></script>
+	<script src='src/ThermostatEngine.js'></script>
+	<script src='src/ThermostatWeb.js'></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
+
 <body>
-  <div id='degrees'><span id='temperature'>20</span></div>
-  <input id='up' type='button' value='&#8593;'>
-  <input id='down' type='button' value='&#8595;'>
-  <input id='reset' type='button' value='Reset'>
-  <input id='togglePowerSavingMode' type='button' value='Power Saving Mode'>
-  <span id='powerSavingMode'>true</span>
+	<div class="row text-center" style="margin-top: 50px">
+		<div class="panel panel-default col-md-3 col-md-offset-4">
+			<div class="panel-body" id="panel">
+
+			<input id='up' type='button' value='&#8593;'>
+			<input id='down' type='button' value='&#8595;'>
+			<input id='reset' type='button' value='Reset'>
+			<input id='togglePowerSavingMode' type='button' value='Power Saving Mode'>
+			<span id='powerSavingMode'>ON</span>
+      </div>
+      <div id='degrees'>
+				<h1><span id='temperature'>20</span>&deg;C</h1>
+			</div>
+		</div>
+	</div>
+
+
+
 </body>
+
 </html>

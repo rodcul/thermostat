@@ -30,6 +30,7 @@ $(document).ready(function() {
 		} else {
 			$('#powerSavingMode').html('OFF')
 		}
+    $('#temperature').html(thermostat.temperature);
     backgroundColor();
 	});
 

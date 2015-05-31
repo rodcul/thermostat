@@ -37,4 +37,7 @@ Thermostat.prototype.color = function() {
 
 Thermostat.prototype.togglePowerSavingMode = function() {
 	this.powerSavingMode = !this.powerSavingMode;
+  if (this.temperature > 25) {
+    this.temperature = 25;
+  }
 };
